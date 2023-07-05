@@ -15,14 +15,38 @@ export class Player implements Actor {
         this.type = ActorType.Player;
 
         this.keyMap = {};
-        this.keyMap[KEYS.VK_NUMPAD8] = 0; // up
+        // up
+        this.keyMap[KEYS.VK_NUMPAD8] = 0;
+        this.keyMap[KEYS.VK_W] = 0;
+
+        // Up-Right
         this.keyMap[KEYS.VK_NUMPAD9] = 1;
-        this.keyMap[KEYS.VK_NUMPAD6] = 2; // right
+        this.keyMap[KEYS.VK_E] = 1;
+
+        // Right
+        this.keyMap[KEYS.VK_NUMPAD6] = 2;
+        this.keyMap[KEYS.VK_D] = 2;
+
+        // Down-Right
         this.keyMap[KEYS.VK_NUMPAD3] = 3;
-        this.keyMap[KEYS.VK_NUMPAD2] = 4; // down
+        this.keyMap[KEYS.VK_X] = 3;
+
+        // Down
+        this.keyMap[KEYS.VK_NUMPAD2] = 4;
+        this.keyMap[KEYS.VK_S] = 4;
+
+        // Down-Left
         this.keyMap[KEYS.VK_NUMPAD1] = 5;
-        this.keyMap[KEYS.VK_NUMPAD4] = 6; // left
+        this.keyMap[KEYS.VK_Z] = 5;
+
+        // Left
+        this.keyMap[KEYS.VK_NUMPAD4] = 6;
+        this.keyMap[KEYS.VK_A] = 6;
+
+        // Up-Left
         this.keyMap[KEYS.VK_NUMPAD7] = 7;
+        this.keyMap[KEYS.VK_Q] = 7;
+
     }
 
     act(): Promise<any> {
